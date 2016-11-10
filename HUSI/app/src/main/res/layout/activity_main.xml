@@ -19,12 +19,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/test_check"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Teszt"/>
-
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
