@@ -1,11 +1,12 @@
 package hu.paprikapp.husi;
 
 import android.os.Parcel;
+import android.os.Parcelable;
 
 /**
  * Created by szugyi on 10/11/16.
  */
-public class AlcoholVolume {
+public class AlcoholVolume implements Parcelable{
     private double alcohol;
     private int volume;
 
@@ -22,7 +23,7 @@ public class AlcoholVolume {
         return alcohol;
     }
 
-    public void setAlohol(double alcohol) {
+    public void setAlcohol(double alcohol) {
         this.alcohol = alcohol;
     }
 
@@ -34,7 +35,11 @@ public class AlcoholVolume {
         this.volume = volume;
     }
 
-    /*
+    @Override
+    public String toString() {
+        return String.format("%s ml - %s%%", volume, alcohol);
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -56,5 +61,4 @@ public class AlcoholVolume {
             return new AlcoholVolume[size];
         }
     };
-    */
 }
